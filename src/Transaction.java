@@ -20,7 +20,7 @@ public interface Transaction {
 
      */
 
-    //int getTransactionId();
+    int getTransactionId();
 
 
     /**
@@ -31,7 +31,7 @@ public interface Transaction {
 
      */
 
-    //String getFirstName();
+    String getFirstName();
 
 
     /**
@@ -42,7 +42,7 @@ public interface Transaction {
 
      */
 
-    //String getLastName();
+    String getLastName();
 
 
     /**
@@ -53,7 +53,7 @@ public interface Transaction {
 
      */ 
 
-    //String getDescription();
+    String getDescription();
 
 
     /**

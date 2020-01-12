@@ -48,14 +48,82 @@ public class Block implements Transaction{
 
      */
 
-    public Block(int id, String first, String last, String description) {
-
-        
-
+    public Block(int id, String first, String last, String transactionDescription) {
+    	transactionId = id;
+    	firstName = first;
+    	lastName = last;
+    	description = transactionDescription;
+    	
+    	timeStampMillis = System.currentTimeMillis();
+    	hashNextBlock = 0;
+        numBlocks++;
     }
     
     
+    /**
 
+     * Returns the transaction id
+
+     * @return the id of the transaction
+
+     */
+    public int getTransactionId() {
+    	return transactionId;
+    }
+
+
+    /**
+
+     * Returns the customer's first name
+
+     * @return the first name
+
+     */
+
+    public String getFirstName() {
+    	return firstName;
+    }
+
+
+    /**
+
+     * Returns the customer's last name
+
+     * @return the last name
+
+     */
+
+    public String getLastName() {
+    	return lastName;
+    }
+
+
+    /**
+
+     * Returns the transaction description
+
+     * @return the description
+
+     */ 
+
+    public String getDescription() {
+    	return description;
+    }
+
+
+    /**
+
+     * Returns the current number of blocks
+
+     * @return the number of blocks
+
+     */
+
+    public static int getNumBlocks() {
+
+        return numBlocks;
+
+    }
 
     
 
@@ -106,8 +174,16 @@ public class Block implements Transaction{
     */
 
     @Override public String toString() {
+    	String result = "";
+    	
+    	result += "ID: " + transactionId + "\n";
+    	result += "Name: " + firstName + " " + lastName + "\n";
+    	result += "Description: " + description + "\n";
+    	result += "Time Stamp: " + timeStampMillis + "\n";
+    	result += "Hash of Next Block: " + hashNextBlock + "\n";
 
-        return "\n";
+
+        return result + "\n";
 
     }
 
