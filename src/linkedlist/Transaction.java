@@ -10,6 +10,8 @@
 
 */
 
+package linkedlist;
+
 public interface Transaction {
 
     /**
@@ -79,3 +81,4 @@ public interface Transaction {
     
 
 }
+
